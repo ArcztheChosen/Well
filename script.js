@@ -10,13 +10,10 @@ function showStep(id) {
     target.style.display = 'block';
   }
 
-  // 🔥 AUTO CLEAR INPUTS EVERY TIME YOU CHANGE STEP
   clearInputs();
 }
 
-/* ---------------------------
-   CLEAR ALL INPUT FIELDS
----------------------------- */
+
 function clearInputs() {
   const inputs = document.querySelectorAll('input');
 
@@ -25,9 +22,6 @@ function clearInputs() {
   });
 }
 
-/* ---------------------------
-   NAME CHECK
----------------------------- */
 function checkName() {
   const name = document
     .getElementById('nameInput')
@@ -42,9 +36,7 @@ function checkName() {
   }
 }
 
-/* ---------------------------
-   CREATOR CHECK
----------------------------- */
+
 function checkCreator() {
   const creator = document
     .getElementById('creatorName')
@@ -59,9 +51,6 @@ function checkCreator() {
   }
 }
 
-/* ---------------------------
-   MEME SYSTEM
----------------------------- */
 function showMemeLoop(returnStep) {
   showStep('memePage');
 
