@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mystery Website</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- STEP 1 -->
+  <div id="step1" class="step">
+    <h1>Tell me your first name</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name"/>
+    <button onclick="checkName()">Continue</button>
+  </div>
+
+  <!-- STEP 2 -->
+  <div id="step2" class="step hidden">
+    <h1>Is your name Justine Mae Patlingrao?</h1>
+    <div class="buttons">
+      <button onclick="showStep('step3')">Yes</button>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div id="step3" class="step hidden">
+    <h1>Is this you?</h1>
+    <p>Sorry for using your picture without permission.</p>
+    <img src="images/Justine.jpg"/>
+    <div class="buttons">
+      <button onclick="showStep('step4')">Yes</button>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div id="step4" class="step hidden">
+    <h1>Do you know who created this website?</h1>
+    <div class="buttons">
+      <button onclick="showStep('step5')">Yes</button>
+      <button onclick="showMeme()">No</button>
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div id="step5" class="step hidden">
+    <h1>Type the creator's name</h1>
+    <input type="text" id="creatorName" placeholder="Creator name"/>
+    <button onclick="checkCreator()">Submit</button>
+  </div>
+
+  <!-- SUCCESS -->
+ <div id="success" class="step hidden">
+  <h1 class="pop">Access Granted ❤️</h1>
+  <button onclick="goFlowers()">Open Surprise</button>
+</div>
+
+  <!-- MEME -->
+  <div id="memePage" class="step hidden">
+    <h1 class="shake">NO! NO! NO! 😂</h1>
+
+    <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3a3VpcHFkbnZkbmw2ejd3b3FhNGtqanRmYjhvdTd2ZTd6YjJsamN3OSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MXUXgMiF3Cn5iWRYpZ/giphy.gif"/>
+
+    <p>You cannot escape 😈</p>
+  </div>
+
+</div>
+
+<audio id="memeSound" loop>
+  <source src="sounds/meme.mp3" type="audio/mp3"/>
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
